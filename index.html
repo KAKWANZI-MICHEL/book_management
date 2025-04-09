@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOOK MANAGEMENT SYSTEM</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="container mt-4">
+    <h2 class="text-center mb-4"><b>📚 Book-Management-System</b></h2>
+    <div class="d-flex justify-content-between mb-3">
+      <input type="text" id="searchInput" class="form-control w-50" placeholder="Search by title or author">
+      <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#addBookModal">+ Add Book</button>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="bookTabs">
+      <li class="nav-item">
+        <button class="nav-link active" data-tab="all"><b>All Books</b></button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-tab="favorites"><b>Favorites</b></button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-tab="read"><b>Read</b></button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-tab="unread"><b>Unread</b></button>
+      </li>
+    </ul>
+
+    <!-- Book Grid -->
+    <div id="bookList" class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+
+      <!-- Books will be injected here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Add Book Modal -->
+  <div class="modal fade" id="addBookModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="addBookForm">
+          <div class="modal-header">
+            <h5 class="modal-title">Add New Book</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="form-control mb-2" id="title" placeholder="Title" required>
+            <input type="text" class="form-control mb-2" id="author" placeholder="Author" required>
+            <input type="text" class="form-control mb-2" id="genre" placeholder="Genre" required>
+            <select class="form-select mb-2" id="status" required>
+              <option value="">Select Status</option>
+              <option value="Read">Read</option>
+              <option value="Unread">Unread</option>
+            </select>
+            <input type="file" class="form-control mb-2" id="image" accept="image/*" required>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Save Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + Custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

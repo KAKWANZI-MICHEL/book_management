@@ -1,0 +1,62 @@
+body {  
+    background-color: #C7D2FE;  
+}  
+.card {  
+    transition: transform 0.2s;  
+}  
+.card:hover {  
+    transform: scale(1.05);  
+}  
+.modal-header {  
+    background-color:  #2b9a66;  
+    color: white;  
+}  
+.modal-footer {  
+    justify-content: space-between;  
+}  
+.search-container {  
+    margin-bottom: 20px;  
+}  
+#bookList {  
+    display: flex;  
+    flex-wrap: wrap;  
+} 
+/* Override the Add Book button color */
+.btn-primary {
+    background-color: #2b9a66; /* Custom purple */
+    border-color: #2b9a66;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2b9a66;
+    border-color: #2b9a66;
+  }
+  /* Customize tab buttons */
+.nav-tabs .nav-link {
+    color: #333;
+    background-color:  #A9A9A9;
+    border: 1px solid #dee2e6;
+    transition: 0.3s;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: white;
+    background-color: #2b9a66 ; /* Active tab color (default blue) */
+    border-color:#2b9a66 ;
+  }
+  
+  /* Hover effect */
+  .nav-tabs .nav-link:hover {
+    background-color: #2b9a66;
+  }
+  .custom-add-btn {
+    background-color: #2b9a66;
+    border-color: #2b9a66;
+  }
+  
+  .custom-add-btn:hover {
+    background-color:  gray;
+  }
+ 
+    
+  
